@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
 })
 
 // Read - Leitura de dados
-router.get('/', async (req, res) => {
+router.get('/person', async (req, res) => {
     try {
         
         const people = await Person.find()
