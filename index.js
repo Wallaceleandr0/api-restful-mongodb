@@ -19,6 +19,8 @@ app.use('/person',  personRoutes)
 
 // rota inical / endpoint
 
+const port = process.env.PORT || 3000
+
 // entregar uma porta
 const DB_USER = 'wallace'
 const DB_PASSWORD = encodeURIComponent('1KQZXR1Tp6Aq55i4')
@@ -27,7 +29,7 @@ mongoose.connect(
     )
 .then(() => {
     console.log('conectamos ao MongoDB')
-    app.listen(3001, (req, res) => {
+    app.listen(port, (req, res) => {
         console.log("Servidor rodando na porta 3001")
     })
 })
